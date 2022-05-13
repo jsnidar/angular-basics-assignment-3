@@ -10,4 +10,14 @@
       </ol>
     </div>
   </div>
+  <div class="row">
+    <div class="col-xs-12">
+      <button class='btn btn-warning' (click)="toggleShow($event)">Display Details</button>
+      <p *ngIf="showParagraph">Secret Password = tuna</p>
+      <div 
+        *ngFor="let item of logs" 
+        [ngStyle]="item > 4 && {'background': 'blue'}"
+        [ngClass]="{log: item > 4}">{{item}}</div>
+    </div>
+  </div>
 </div>

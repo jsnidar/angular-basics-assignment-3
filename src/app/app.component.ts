@@ -6,4 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  showParagraph: boolean = true;
+  logs = [];
+
+  toggleShow(){
+    this.logs.push(this.logs.length + 1)
+    this.showParagraph = !this.showParagraph
+  }
+  
 }
